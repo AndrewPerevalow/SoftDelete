@@ -1,4 +1,4 @@
-package domain;
+package example.com.domain;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -6,8 +6,11 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -23,4 +26,8 @@ public class ProductEntity {
     private String name;
     private Integer price;
     private Boolean active;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "shopping_cart_id", updatable = false, insertable = false)
+    private ShoppingCartEntity shoppingCart;
 }

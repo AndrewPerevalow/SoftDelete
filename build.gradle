@@ -15,6 +15,7 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter:2.7.7'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.7'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.7.7'
 
     implementation 'org.hibernate.orm:hibernate-jpamodelgen:6.1.1.Final'
     annotationProcessor 'org.hibernate:hibernate-jpamodelgen:6.1.1.Final'
