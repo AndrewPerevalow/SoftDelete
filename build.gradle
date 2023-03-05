@@ -10,17 +10,19 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.projectlombok:lombok:1.18.22'
-    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    implementation 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
 
     implementation 'org.springframework.boot:spring-boot-starter:2.7.7'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.7'
     implementation 'org.springframework.boot:spring-boot-starter-web:2.7.7'
 
-    implementation 'org.hibernate.orm:hibernate-jpamodelgen:6.1.1.Final'
-    annotationProcessor 'org.hibernate:hibernate-jpamodelgen:6.1.1.Final'
+    implementation 'org.hibernate:hibernate-jpamodelgen:5.6.12.Final'
+    annotationProcessor 'org.hibernate:hibernate-jpamodelgen:5.6.12.Final'
 
     implementation 'org.postgresql:postgresql:42.5.1'
+
+    implementation 'org.modelmapper:modelmapper:3.0.0'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
