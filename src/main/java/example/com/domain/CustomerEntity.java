@@ -40,5 +40,6 @@ public class CustomerEntity {
     private ShopEntity shop;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "shopping_cart_id", updatable = false, insertable = false)
     private ShoppingCartEntity shoppingCart;
 }

@@ -1,8 +1,10 @@
 package example.com.filter;
 
 import example.com.domain.CustomerEntity;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.jpa.domain.Specification;
 
@@ -17,6 +19,8 @@ import static org.springframework.data.jpa.domain.Specification.where;
 @Getter
 @Setter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CustomerFilter implements Filter<CustomerEntity> {
     private List<String> ids;
     private String name;

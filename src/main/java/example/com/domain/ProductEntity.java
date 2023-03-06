@@ -4,6 +4,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.SQLDeleteAll;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -18,6 +21,9 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @NoArgsConstructor
+@SQLDelete(sql = "update product set active=false where id=?")
+@SQLDeleteAll(sql = "update product set active=false where id=?")
+//@Where(clause = "active=true")
 public class ProductEntity {
     @Id
     @GeneratedValue(generator = "uuid")
